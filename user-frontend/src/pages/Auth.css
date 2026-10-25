@@ -1,0 +1,343 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 18px;
+  font-family: 'Inter', Arial, sans-serif;
+  background:
+    radial-gradient(ellipse at top left, rgba(249, 115, 22, 0.19), transparent 40%),
+    linear-gradient(135deg, #0b1220, #17283a 55%, #101827);
+}
+
+.auth-layout {
+  width: 100%;
+  max-width: 1020px;
+  min-height: 590px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+}
+
+.auth-brand {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 42px;
+  color: white;
+  overflow: hidden;
+  background:
+    linear-gradient(150deg, rgba(10, 18, 31, 0.94), rgba(20, 38, 57, 0.86)),
+    url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=85")
+    center / cover;
+}
+
+.auth-brand::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -110px;
+  bottom: -100px;
+  border: 1px solid rgba(249, 115, 22, 0.45);
+  border-radius: 50%;
+  box-shadow: 0 0 0 35px rgba(249, 115, 22, 0.06),
+              0 0 0 70px rgba(249, 115, 22, 0.04);
+}
+
+.auth-brand-content,
+.auth-brand-footer,
+.auth-logo {
+  position: relative;
+  z-index: 1;
+}
+
+.auth-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.auth-logo-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #f97316;
+  color: white;
+  font-size: 23px;
+}
+
+.auth-brand-content {
+  margin: 45px 0;
+}
+
+.auth-brand-content .auth-kicker {
+  color: #fdba74;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.auth-brand-content h1 {
+  max-width: 390px;
+  margin: 18px 0;
+  font-size: clamp(32px, 4vw, 47px);
+  line-height: 1.12;
+  letter-spacing: -1.7px;
+}
+
+.auth-brand-content p {
+  max-width: 350px;
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.auth-benefits {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.auth-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e2e8f0;
+  font-size: 13px;
+}
+
+.auth-benefit-icon {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: rgba(249, 115, 22, 0.17);
+  color: #fdba74;
+}
+
+.auth-brand-footer {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.auth-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 42px;
+  background: #fff;
+}
+
+.auth-form-content {
+  width: 100%;
+  max-width: 390px;
+}
+
+.auth-mobile-logo {
+  display: none;
+}
+
+.auth-heading {
+  margin: 0;
+  color: #111827;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.auth-description {
+  margin: 10px 0 28px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.auth-form {
+  display: grid;
+  gap: 17px;
+}
+
+.auth-field {
+  display: grid;
+  gap: 8px;
+}
+
+.auth-field label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.auth-field input,
+.auth-field select,
+.auth-field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 14px;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  outline: none;
+  background: #f8fafc;
+  color: #172033;
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.auth-field textarea {
+  resize: vertical;
+}
+
+.auth-field input:focus,
+.auth-field select:focus,
+.auth-field textarea:focus {
+  border-color: #f97316;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
+
+.auth-field input::placeholder,
+.auth-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.auth-submit {
+  width: 100%;
+  min-height: 49px;
+  margin-top: 4px;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 7px 16px rgba(234, 88, 12, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.auth-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(234, 88, 12, 0.28);
+}
+
+.auth-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+}
+
+.auth-message {
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.auth-error {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.auth-success {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.auth-switch {
+  margin-top: 24px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.auth-switch a,
+.auth-back-link {
+  color: #ea580c;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-switch a:hover,
+.auth-back-link:hover {
+  text-decoration: underline;
+}
+
+.auth-back-link {
+  display: inline-block;
+  margin-bottom: 22px;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .auth-layout {
+    max-width: 510px;
+    grid-template-columns: 1fr;
+  }
+
+  .auth-brand {
+    display: none;
+  }
+
+  .auth-form-panel {
+    padding: 36px 28px;
+  }
+
+  .auth-mobile-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    color: #172033;
+    font-size: 22px;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 420px) {
+  .auth-page {
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .auth-layout {
+    margin: auto 0;
+    border-radius: 18px;
+  }
+
+  .auth-form-panel {
+    padding: 26px 20px;
+  }
+
+  .auth-heading {
+    font-size: 26px;
+  }
+
+  .auth-description {
+    margin-bottom: 22px;
+  }
+}

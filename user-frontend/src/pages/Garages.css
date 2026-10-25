@@ -1,0 +1,616 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.garages-page {
+  --gf-navy: #101c2d;
+  --gf-orange: #ff6b35;
+  --gf-text: #182438;
+  --gf-muted: #718096;
+  --gf-border: #e6eaf0;
+  --gf-bg: #f6f8fb;
+
+  min-height: 100vh;
+  background: var(--gf-bg);
+  color: var(--gf-text);
+  font-family: "DM Sans", sans-serif;
+}
+
+.garages-page * {
+  box-sizing: border-box;
+}
+
+.garages-header {
+  min-height: 76px;
+  padding: 14px clamp(18px, 5vw, 76px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  border-bottom: 1px solid var(--gf-border);
+}
+
+.garages-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: none;
+  color: var(--gf-navy);
+  font: 800 23px "Manrope", sans-serif;
+  cursor: pointer;
+}
+
+.garages-brand-icon {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: var(--gf-orange);
+  border-radius: 12px;
+  font-size: 23px;
+}
+
+.garages-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.garages-nav-link,
+.garages-logout {
+  border: 0;
+  background: transparent;
+  font: 600 14px "DM Sans", sans-serif;
+  cursor: pointer;
+}
+
+.garages-nav-link {
+  color: #526174;
+}
+
+.garages-nav-link:hover {
+  color: var(--gf-orange);
+}
+
+.garages-logout {
+  padding: 11px 18px;
+  border: 1px solid #e2e7ee;
+  border-radius: 10px;
+  color: var(--gf-navy);
+}
+
+.garages-logout:hover {
+  border-color: var(--gf-orange);
+  color: var(--gf-orange);
+}
+
+.garages-hero {
+  position: relative;
+  min-height: 310px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 50px clamp(20px, 7vw, 100px);
+  background:
+    radial-gradient(ellipse at 90% 30%, #283c56 0, transparent 45%),
+    linear-gradient(115deg, #101c2d, #172a42);
+  color: #fff;
+}
+
+.garages-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 690px;
+}
+
+.garages-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--gf-orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.garages-hero h1 {
+  max-width: 620px;
+  margin: 0 0 14px;
+  font: 800 clamp(30px, 4vw, 46px)/1.15 "Manrope", sans-serif;
+  letter-spacing: -1.6px;
+}
+
+.garages-hero-content > p:not(.garages-location-message) {
+  max-width: 540px;
+  margin: 0 0 23px;
+  color: #c5cfdb;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.garages-location-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 19px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--gf-orange);
+  color: white;
+  font: 700 14px "DM Sans", sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.garages-location-button:hover {
+  background: #ed5926;
+  transform: translateY(-1px);
+}
+
+.garages-location-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.garages-location-message {
+  margin: 12px 0 0;
+  color: #d7e2ed;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.garages-hero-decoration {
+  position: absolute;
+  right: 9%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #344b65;
+  user-select: none;
+}
+
+.hero-wheel {
+  font-size: clamp(120px, 20vw, 230px);
+  line-height: 1;
+}
+
+.hero-road {
+  margin-top: -12px;
+  font-size: 10px;
+  letter-spacing: 5px;
+  white-space: nowrap;
+}
+
+.garages-content {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 44px 24px 64px;
+}
+
+.garages-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.garages-section-heading h2 {
+  margin: 0 0 8px;
+  color: var(--gf-navy);
+  font: 800 28px "Manrope", sans-serif;
+}
+
+.garages-section-heading p {
+  margin: 0;
+  color: var(--gf-muted);
+  font-size: 14px;
+}
+
+.garages-refresh {
+  padding: 11px 16px;
+  border: 1px solid var(--gf-border);
+  border-radius: 10px;
+  background: white;
+  color: var(--gf-text);
+  font: 600 13px "DM Sans", sans-serif;
+  cursor: pointer;
+}
+
+.garages-refresh:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.garages-filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(150px, 220px) minmax(145px, 190px);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.garages-search {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border: 1px solid var(--gf-border);
+  border-radius: 11px;
+  background: white;
+  color: var(--gf-muted);
+}
+
+.garages-search > span {
+  font-size: 23px;
+}
+
+.garages-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--gf-text);
+  font: 14px "DM Sans", sans-serif;
+}
+
+.garages-filters select {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 12px;
+  border: 1px solid var(--gf-border);
+  border-radius: 11px;
+  outline-color: var(--gf-orange);
+  background: white;
+  color: var(--gf-text);
+  font: 13px "DM Sans", sans-serif;
+}
+
+.garages-info {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 0 0 20px;
+  padding: 13px 15px;
+  border: 1px solid #e2eaf5;
+  border-radius: 10px;
+  background: #edf4fc;
+  color: #526b87;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.garages-error {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #b42332;
+  font-size: 14px;
+}
+
+.garages-error button {
+  padding: 8px 12px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: white;
+  color: #b42332;
+  cursor: pointer;
+}
+
+.garages-results-count {
+  margin: 0 0 17px;
+  color: var(--gf-muted);
+  font-size: 13px;
+}
+
+.garages-results-count strong {
+  color: var(--gf-text);
+}
+
+.garages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.garage-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid var(--gf-border);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(16, 28, 45, 0.025);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.garage-card:hover {
+  transform: translateY(-3px);
+  border-color: #ffd0bd;
+  box-shadow: 0 14px 30px rgba(16, 28, 45, 0.08);
+}
+
+.garage-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.garage-avatar {
+  width: 49px;
+  height: 49px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: #fff0e9;
+  color: var(--gf-orange);
+  font: 800 23px "Manrope", sans-serif;
+}
+
+.garage-distance {
+  max-width: 70%;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: #eef8f0;
+  color: #267644;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.garage-distance-muted {
+  background: #f1f3f6;
+  color: #6b7280;
+}
+
+.garage-card h3 {
+  margin: 0 0 7px;
+  overflow-wrap: anywhere;
+  color: var(--gf-navy);
+  font: 800 19px/1.4 "Manrope", sans-serif;
+}
+
+.garage-card-description {
+  margin: 0 0 16px;
+  color: var(--gf-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.garage-services {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 7px;
+  min-height: 32px;
+  margin-bottom: 22px;
+}
+
+.garage-service-tag {
+  padding: 6px 9px;
+  border: 1px solid #e8edf3;
+  border-radius: 7px;
+  background: #f8fafc;
+  color: #526174;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.garage-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 9px;
+  margin-top: auto;
+}
+
+.garage-directions-button,
+.garage-request-button {
+  min-width: 0;
+  padding: 11px 9px;
+  border-radius: 9px;
+  font: 700 12px "DM Sans", sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.garage-directions-button {
+  border: 1px solid #dce3ec;
+  background: white;
+  color: var(--gf-navy);
+}
+
+.garage-directions-button:hover:not(:disabled) {
+  background: #f1f5f9;
+}
+
+.garage-directions-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.garage-request-button,
+.garages-primary-button {
+  border: 0;
+  background: var(--gf-orange);
+  color: white;
+}
+
+.garage-request-button:hover,
+.garages-primary-button:hover {
+  background: #ed5926;
+}
+
+.garages-state {
+  padding: 58px 20px;
+  border: 1px dashed #d9e0e9;
+  border-radius: 16px;
+  background: white;
+  text-align: center;
+}
+
+.garages-state h3 {
+  margin: 12px 0 8px;
+  color: var(--gf-navy);
+  font: 800 20px "Manrope", sans-serif;
+}
+
+.garages-state p {
+  margin: 0 auto 18px;
+  max-width: 420px;
+  color: var(--gf-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.garages-spinner {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+  border: 3px solid #e8edf3;
+  border-top-color: var(--gf-orange);
+  border-radius: 50%;
+  animation: garage-spin 0.8s linear infinite;
+}
+
+@keyframes garage-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.garages-empty-icon {
+  color: #a0adbd;
+  font-size: 38px;
+}
+
+.garages-primary-button {
+  padding: 11px 16px;
+  border-radius: 9px;
+  font: 700 13px "DM Sans", sans-serif;
+  cursor: pointer;
+}
+
+.garages-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 22px clamp(20px, 5vw, 76px);
+  border-top: 1px solid var(--gf-border);
+  background: white;
+  color: var(--gf-muted);
+  font-size: 12px;
+}
+
+.garages-footer-brand {
+  color: var(--gf-navy);
+  font: 800 15px "Manrope", sans-serif;
+}
+
+@media (max-width: 950px) {
+  .garages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .garages-hero-decoration {
+    right: 2%;
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 650px) {
+  .garages-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 20px;
+  }
+
+  .garages-nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .garages-nav-link,
+  .garages-logout {
+    font-size: 12px;
+  }
+
+  .garages-hero {
+    min-height: 300px;
+    padding: 38px 22px;
+  }
+
+  .garages-hero h1 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .garages-hero-content > p:not(.garages-location-message) {
+    font-size: 14px;
+  }
+
+  .garages-hero-decoration {
+    right: -35px;
+    opacity: 0.2;
+  }
+
+  .garages-content {
+    padding: 32px 16px 45px;
+  }
+
+  .garages-section-heading {
+    align-items: flex-start;
+  }
+
+  .garages-section-heading h2 {
+    font-size: 24px;
+  }
+
+  .garages-refresh {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+
+  .garages-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .garages-search {
+    grid-column: 1 / -1;
+  }
+
+  .garages-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .garage-card {
+    padding: 19px;
+  }
+
+  .garage-card-actions {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  .garages-footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
